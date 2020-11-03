@@ -8,9 +8,13 @@ app.use(express.static('client'))
 
 
 app.use(bodyParser.json());
-app.post('/upload_json', (req, res) => {})
+var body=bodyParser.urlencoded({ extended: false });
 
-
+app.post('/',body,function (req, res) {
+    json.parse(req.body.Json)
+})
+// `$.ajax({method: 'POST', url: '/upload_json', ... })`
+// app.preventDefault();
 
 
 
