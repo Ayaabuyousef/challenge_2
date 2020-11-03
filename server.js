@@ -11,14 +11,19 @@ app.use(bodyParser.json());
 var body=bodyParser.urlencoded({ extended: false });
 
 app.post('/',body,function (req, res) {
-    json.parse(req.body.Json)
+   json.parse(req.body.Json)
+   //console.log(data)
 })
 // `$.ajax({method: 'POST', url: '/upload_json', ... })`
-// app.preventDefault();
-
-
+/// .preventDefault();
 
 app.listen(44444, () => console.log('Application started on port 44444'));
+
+var convertJSON=function(){
+    var arr=[]
+    
+}
+
 
 
 
